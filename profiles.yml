@@ -1,0 +1,12 @@
+send_anonymous_usage_stats: false
+test:
+    target: accountingetl
+    outputs:
+        accountingetl:
+            account: '{{ env_var("DBT_KBC_ACCOUNTINGETL_ACCOUNT") }}'
+            database: '{{ env_var("DBT_KBC_ACCOUNTINGETL_DATABASE") }}'
+            password: '{{ env_var("DBT_KBC_ACCOUNTINGETL_PASSWORD") }}'
+            schema: '{{ env_var("DBT_KBC_ACCOUNTINGETL_SCHEMA") }}'
+            type: '{{ env_var("DBT_KBC_ACCOUNTINGETL_TYPE") }}'
+            user: '{{ env_var("DBT_KBC_ACCOUNTINGETL_USER") }}'
+            warehouse: '{{ env_var("DBT_KBC_ACCOUNTINGETL_WAREHOUSE") }}'
